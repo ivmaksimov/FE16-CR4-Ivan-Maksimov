@@ -1,5 +1,15 @@
 
-
+.notification{
+  display: inline;
+  color: white;
+  background-color: red;
+  font-size: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius:50%;
+  width: 4em;
+  
+}
 
 header{
   display: flex;
@@ -103,7 +113,8 @@ footer i {
 }
 
 footer ul{
-  margin: 1em;
+  margin-left: -2em;
+  margin-top: 1em;
   width: 20%;
   display: flex;
   justify-content: center;
@@ -121,6 +132,10 @@ form{
   width: 60%;
 }
 
+.copy{
+  margin-top: 2em ;
+}
+
 
 
 .subscribe {
@@ -128,4 +143,56 @@ form{
   border: 1px solid white;
   color: white;
   margin-bottom: 10px;
+}
+
+#cards{
+  width: 15rem;
+}
+
+@media screen and (min-width:1200px) and (max-width:1399px) {
+  #cards{
+    width: 13rem;
+  }
+}
+@media screen and (min-width:992px) and (max-width:1199.999px) {
+  #cards {
+      width: 12rem;
+    }
+  form{
+    width: 60%;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:991.999px) {
+  #cards {
+      width: 13rem;
+    }
+  
+  form {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width:767.999px){
+
+  .input-input{
+    flex-flow: column;
+  }
+
+  .input-input p {
+    margin-bottom: 10px;
+  }
+  form {
+    display: flex;
+    flex-flow: column;
+      width: 50%;
+      align-self: center;
+    }
+  .input{
+    width: 100%;
+  }
+  .subscribe{
+    width: 70%;
+    align-self: center;
+  }
 }

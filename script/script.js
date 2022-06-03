@@ -6,7 +6,7 @@ let main = document.getElementById("main");
 
 function displayCards() {
   for (let i in todos) {
-    main.innerHTML += `<div class="card cards box-shadow" style="width: 16rem; border-radius: 5px">
+    main.innerHTML += `<div id="cards" class="card cards box-shadow" style=" border-radius: 5px">
         <div
           class="d-flex justify-content-between card-header border-0 bg-white fs3"
         >
@@ -52,7 +52,7 @@ function displayCards() {
           <div class="d-flex justify-content-around me-3" style="width: 50%">
             <a
               href="#"
-              class="btn btn-danger d-flex align-items-center justify-content-center d-btn"
+              class="btn btn-danger d-flex align-items-center justify-content-center me-1 d-btn"
               ><i class="fa fa-trash-can me-1"></i>Delete</a
             >
             <a
@@ -86,13 +86,15 @@ function displayCards() {
   let sort = document.getElementById("sort");
   sort.addEventListener("click", function(){
   todos.sort(function(a, b){
+    //ascending order
+    //return parseFloat(a.priority) - parseFloat(b.priority);
+    //descending order 
     return parseFloat(b.priority) - parseFloat(a.priority);
-    
   });
   main.innerHTML= "";
   displayCards();
   for (let i in todos) {
-    console.log(todos[i].priority)
+    
     let count = document.getElementById(`priority${i}`);
     count.innerHTML = todos[i].priority;
     if (todos[i].priority <= 1) {
