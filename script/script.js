@@ -1,5 +1,5 @@
 let todos = JSON.parse(todo);
-console.table(todos);
+
 let main = document.getElementById("main");
 
 
@@ -52,36 +52,36 @@ function displayCards() {
           <div class="d-flex justify-content-around me-3" style="width: 50%">
             <a
               href="#"
-              class="btn btn-danger d-flex align-items-center justify-content-center me-1 d-btn"
+              class="buttons btn btn-danger d-flex align-items-center justify-content-center me-1 d-btn"
               ><i class="fa fa-trash-can me-1"></i>Delete</a
             >
             <a
               href="#"
-              class="btn btn-success d-flex align-items-center justify-content-center d-btn"
+              class="buttons btn btn-success d-flex align-items-center justify-content-center d-btn"
               ><i class="fa fa-circle-check me-1"></i>Done</a
             >
           </div>
         </div>
       </div>`
   };
+
+
   for (let i in todos) {
 
-  let priority = document.getElementsByClassName("priority")[i].addEventListener("click", function() {
+  document.getElementsByClassName("priority")[i].addEventListener("click", function() {
     let count = document.getElementById(`priority${i}`);
     todos[i].priority++;
     count.innerHTML = todos[i].priority;
-    if (todos[i].priority <= 1) {
-      count.classList.add("bg-success");
-    } else if (todos[i].priority <= 3) {
-    count.classList.add("bg-warning");
-    } else {
-      count.classList.add("bg-danger");
-    }
+    
+    changeColors();
   })
 }
+
 };
 
+
   displayCards();
+  
 
   let sort = document.getElementById("sort");
   sort.addEventListener("click", function(){
@@ -93,6 +93,10 @@ function displayCards() {
   });
   main.innerHTML= "";
   displayCards();
+  changeColors()
+});
+
+let changeColors = () => {
   for (let i in todos) {
     
     let count = document.getElementById(`priority${i}`);
@@ -105,7 +109,7 @@ function displayCards() {
       count.classList.add("bg-danger");
     }
   }
-}) 
+};
 
 
 
