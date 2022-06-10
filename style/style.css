@@ -1,29 +1,28 @@
-
-.notification{
+.notification {
   display: inline;
   color: white;
   background-color: red;
   font-size: 18px;
   padding-left: 0px;
   padding-right: 0px;
-  border-radius:50%;
+  border-radius: 50%;
   width: 2em;
   height: 1.7em;
 }
 
-.brand{
+.brand {
   margin-top: -6px;
 }
 
-.check{
+.check {
   margin-top: 10px;
 }
 
-nav a:hover{
-  text-shadow: 0px 0px 30px  white;
+nav a:hover {
+  text-shadow: 0px 0px 30px white;
 }
 
-header{
+header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,11 +34,12 @@ header{
 
 }
 
-.header-text{
+.header-text {
   background-color: rgba(0, 0, 0, 0.3);
   padding: 1em;
   color: white;
 }
+
 .task {
   background-color: rgb(6, 202, 240);
   display: inline-block;
@@ -52,31 +52,32 @@ header{
   border: none;
 }
 
-.task:hover{
+.task:hover {
   box-shadow: 0px 0px 30px 1px rgb(6, 202, 240);
 }
 
-#sort:hover{
+#sort:hover {
   text-shadow: 0px 0px 20px black;
 
 }
+
 .fs3 {
   font-size: 18px;
 }
 
-.box-shadow{
+.box-shadow {
   margin-top: 5em;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
 }
 
-.d-btn{
+.d-btn {
   height: 2em;
   width: 5em;
   border-radius: 4px;
   font-size: 18px
 }
 
-.main-header{
+.main-header {
   width: 96%;
   display: flex;
   justify-content: space-between;
@@ -86,7 +87,7 @@ header{
 
 }
 
-.main-header p{
+.main-header p {
   margin-top: 1em;
 }
 
@@ -96,15 +97,16 @@ header{
   font-size: 18px;
 }
 
-main{
+main {
   flex-flow: column;
 }
 
-.cards{
+.cards {
   margin-top: 2em;
+  width: 18em;
 }
 
-footer{
+footer {
   margin-top: 2em;
   display: flex;
   flex-flow: column;
@@ -114,37 +116,40 @@ footer{
   color: white;
   font-size: 18px;
 }
-footer  li, a {
+
+footer li,
+a {
   display: flex;
   justify-content: center;
   text-decoration: none;
   list-style: none;
   color: white;
-  
+
 }
 
-footer a{
+footer a {
   border: 1px solid white;
   padding: 5px;
   border-radius: 5px;
 }
 
-footer a:hover{
-box-shadow: 0px 0px 30px 1px white;
-color: white;
+footer a:hover {
+  box-shadow: 0px 0px 30px 1px white;
+  color: white;
 }
 
 footer i {
   font-size: 14px;
   padding: 5px;
-  
+
 }
-.input-input{
+
+.input-input {
   width: 100%;
   justify-content: center;
 }
 
-footer ul{
+footer ul {
   margin-left: -2em;
   margin-top: 1em;
   width: 20%;
@@ -157,15 +162,16 @@ input {
   border-radius: 5px;
 }
 
-form{
+form {
   width: 30%;
 }
-.input{
+
+.input {
   width: 60%;
 }
 
-.copy{
-  margin-top: 2em ;
+.copy {
+  margin-top: 2em;
 }
 
 
@@ -177,24 +183,26 @@ form{
   margin-bottom: 10px;
 }
 
-.subscribe:hover{
+.subscribe:hover {
   box-shadow: 0px 0px 30px 1px white;
 }
 
-#cards{
-  width: 15rem;
+#cards {
+  width: 30%;
 }
 
 @media screen and (min-width:1200px) and (max-width:1399px) {
-  #cards{
-    width: 13rem;
+  #cards {
+    width: 30%;
   }
 }
+
 @media screen and (min-width:992px) and (max-width:1199.999px) {
   #cards {
-      width: 12rem;
-    }
-  form{
+    width: 30%;
+  }
+
+  form {
     width: 60%;
   }
 
@@ -205,42 +213,119 @@ form{
 
 @media screen and (min-width:768px) and (max-width:991.999px) {
   #cards {
-      width: 13rem;
-    }
-  
+    width: 40%;
+  }
+
   form {
     width: 60%;
   }
 
-    .buttons {
-      font-size: 16px;
-    }
+  .buttons {
+    font-size: 16px;
+  }
 }
 
-@media screen and (max-width:767.999px){
+@media screen and (min-width:576px) and (max-width:767.999px) {
 
-  .input-input{
+  #cards {
+    width: 70%;
+  }
+
+  .input-input {
     flex-flow: column;
   }
 
   .input-input p {
     margin-bottom: 10px;
   }
+
   form {
     display: flex;
     flex-flow: column;
-      width: 50%;
-      align-self: center;
-    }
-  .input{
+    width: 50%;
+    align-self: center;
+  }
+
+  .input {
     width: 100%;
   }
-  .subscribe{
+
+  .subscribe {
     width: 70%;
     align-self: center;
   }
 
-  .buttons{
-    font-size: 16px;
+  .buttons {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width:300px) and (max-width:575.999px) {
+
+  #cards {
+    width: 80%;
+  }
+
+  .input-input {
+    flex-flow: column;
+  }
+
+  .input-input p {
+    margin-bottom: 10px;
+  }
+
+  form {
+    display: flex;
+    flex-flow: column;
+    width: 50%;
+    align-self: center;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .subscribe {
+    width: 70%;
+    align-self: center;
+  }
+
+  .buttons {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width:299.999px) {
+
+  #cards {
+    width: 80%;
+  }
+
+  .input-input {
+    flex-flow: column;
+  }
+
+  .input-input p {
+    margin-bottom: 10px;
+  }
+
+  form {
+    display: flex;
+    flex-flow: column;
+    width: 50%;
+    align-self: center;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .subscribe {
+    width: 70%;
+    align-self: center;
+  }
+
+  .buttons {
+    font-size: 10px;
   }
 }
